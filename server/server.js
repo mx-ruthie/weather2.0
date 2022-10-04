@@ -14,6 +14,9 @@ app.get('/', (req, res) => {
   res.json({ message: 'Hello from My template ExpressJS' });
 });
 
+// How to call the openweather API 
+// https://api.openweathermap.org/data/2.5/weather?q={enter zip code here},US&APPID=8e60db355f1a579fb40c4d4ab79f224d
+
 // create the get request
 app.get('/api/students', cors(), async (req, res) => {
   // const STUDENTS = [
@@ -33,20 +36,7 @@ app.get('/api/students', cors(), async (req, res) => {
   }
 });
 
-// create the POST request
-app.post('/api/students', cors(), async (req, res) => {
-  const newUser = {
-    firstname: req.body.firstname,
-    lastname: req.body.lastname,
-  };
-  console.log([newUser.firstname, newUser.lastname]);
-  const result = await db.query(
-    'INSERT INTO students(firstname, lastname) VALUES($1, $2) RETURNING *',
-    [newUser.firstname, newUser.lastname],
-  );
-  console.log(result.rows[0]);
-  res.json(result.rows[0]);
-});
+
 
 // console.log that your server is up and running
 app.listen(PORT, () => {

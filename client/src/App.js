@@ -1,11 +1,15 @@
-import "./App.css";
-import Students from "./components/students";
+//import logo from './logo.svg';
+import './App.css';
+import ZipCode from './components/ZipCode';
+import WeatherRender from './components/WeatherRender';
+
 
 function App() {
   return (
     <div className="App">
-      Hello from Techtonica
-      <Students />
+      <h1 className="App-header">Weather Fast U.S.A</h1>
+      <ZipCode />
+      <WeatherRender className="data-display"/>
     </div>
   );
 }
