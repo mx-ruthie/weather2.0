@@ -1,7 +1,7 @@
 //import logo from './logo.svg';
 import './App.css';
 import ZipCode from './components/ZipCode';
-import WeatherRender from './components/WeatherRender';
+//import WeatherRender from './components/WeatherRender';
 
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <h1 className="App-header">Weather Fast U.S.A</h1>
       <ZipCode />
-      <WeatherRender className="data-display"/>
+      {/* <WeatherRender className="data-display"/> */}
     </div>
   );
 }
