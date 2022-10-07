@@ -1,11 +1,12 @@
 
-
-const WeatherRender = () => {
+const WeatherRender = (props) => {
 
   return (
     <div className="data-display">
-     <h1> Current weather details for INSERT PROP CALLING STATE OF FORM FIELD ON SUBMIT</h1>
-     
+     <h1> Current weather details for: {props.zip} </h1>
+      <p> Current Temperature: {props.temp}</p>
+      <p>Feels like: {props.feels}</p>
+      <p>Chance of Rain: {props.rain}</p>     
     </div>
   )
 };

@@ -2,7 +2,7 @@
 
 const { Pool } = require('pg');
 const db = new Pool({
-    connectionString: process.env.DB_URI
+    connectionString: process.env.REACT_APP_API_KEY
   });
 
   module.exports = db;
